@@ -8,7 +8,7 @@ import { useAuthState } from 'react-firebase-hooks/auth';
 import { getAuth } from 'firebase/auth';
 import { GoogleAuthProvider,signInWithPopup } from 'firebase/auth';
 import { useEffect } from 'react';
-export default function page() {
+export default function Page() {
   const [Id, SetId] = useState('');
 
   const [loadings, setLoading] = useState(false);

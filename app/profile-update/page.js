@@ -58,7 +58,7 @@ const Onboarding = () => {
   ];
 
   useEffect(() => {
-    console.log(currentStep)
+  
     if (user) {
       setFormData((prevFormData) => ({
         ...prevFormData,

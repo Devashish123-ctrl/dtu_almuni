@@ -1,6 +1,5 @@
 'use client'
   import React, { useEffect } from 'react';
-  import data from './../../images/photo_6314437726212046016_y.jpg'
   import { CiHome } from "react-icons/ci";
   import { FaSearch } from "react-icons/fa";
   import { IoIosNotificationsOutline } from "react-icons/io";
@@ -12,7 +11,6 @@
   import { useRef } from 'react';
   import { signOut } from 'firebase/auth';
   import { MdOutlineModeComment } from "react-icons/md";
-  import photo from "./../../images/1.jpeg"
   import Search from '../components/Search';
 import Image from 'next/image';
 import firebase from 'firebase/app';
@@ -36,11 +34,11 @@ import { signIn } from '../page';
 
 
 
-   export default function page() {
+   export default function Page() {
     const [text, setText] = useState('');
-    const [image, setImage] = useState(null);
+    const [Image, setImage] = useState(null);
     const textareaRef = useRef(null);
-    const [imageURL, setImageURL] = useState('');
+    const [ImageURL, setImageURL] = useState('');
     const[ImageName, SetImageName] = useState('')
     const[UploadImage, SetUploadImage] = useState('')
     const [Profile, SetProfile] = useState('')
@@ -49,8 +47,8 @@ import { signIn } from '../page';
   
     const handleUpload  = async () => {
       if(!UploadImage){
-        const imageDocRef = collection(db, 'Forums',); 
-        await addDoc(imageDocRef, {
+        const ImageDocRef = collection(db, 'Forums',); 
+        await addDoc(ImageDocRef, {
           UserId : user.uid,
           text:text,
           createdAt: new Date(),
@@ -63,19 +61,19 @@ import { signIn } from '../page';
         setImage('')
       }
    
-    else{const imageRef = ref(storage, `images/${ImageName}`);
+    else{const ImageRef = ref(storage, `Images/${ImageName}`);
     
 
     try {
       // Upload the file to the specified storage reference
-      await uploadBytes(imageRef, UploadImage);
+      await uploadBytes(ImageRef, UploadImage);
       
       // Get the download URL
-      const url = await getDownloadURL(imageRef);
+      const url = await getDownloadURL(ImageRef);
        // Store the download URL in Firestore
-       const imageDocRef = collection(db, 'Forums',); 
+       const ImageDocRef = collection(db, 'Forums',); 
 
-       await addDoc(imageDocRef, {
+       await addDoc(ImageDocRef, {
          UserId : user.uid,
          url: url,
          text:text,
@@ -184,13 +182,7 @@ import { signIn } from '../page';
 
         }
       };
-      async function ProfileGet() {
-        const userRef = doc(db, "users", user.uid);
-        const userSnapshot = await getDoc(userRef);
-       
-        SetProfile( userSnapshot.data())
-        
-      }
+      
     
 
 
@@ -200,7 +192,13 @@ import { signIn } from '../page';
         const [photoURL, setPhotoURL] = useState('');
         useEffect(() => {
             if (user) {
-               ProfileGet()
+              async function ProfileGet() {
+                const userRef = doc(db, "users", user.uid);
+                const userSnapshot = await getDoc(userRef);
+               
+                SetProfile( userSnapshot.data())
+                
+              }
               setPhotoURL(user.photoURL);
             }
           }, [user])
@@ -274,9 +272,9 @@ import { signIn } from '../page';
         style={styles.textarea}
         id="wwe"
       />
-      {image && (
-        <div style={styles.imagePreview}>
-          <img src={image} alt="Preview" style={styles.image}  />
+      {Image && (
+        <div style={styles.ImagePreview}>
+          <img src={Image} alt="Preview" style={styles.Image}  />
           <button class="button" onClick={handleRemoveImage}>
   <svg viewBox="0 0 448 512" class="svgIcon"><path d="M135.2 17.7L128 32H32C14.3 32 0 46.3 0 64S14.3 96 32 96H416c17.7 0 32-14.3 32-32s-14.3-32-32-32H320l-7.2-14.3C307.4 6.8 296.3 0 284.2 0H163.8c-12.1 0-23.2 6.8-28.6 17.7zM416 128H32L53.2 467c1.6 25.3 22.6 45 47.9 45H346.9c25.3 0 46.3-19.7 47.9-45L416 128z"></path></svg>
 </button>
@@ -288,7 +286,7 @@ import { signIn } from '../page';
             <FaImage style={styles.icon} />
             <input
               type="file"
-              accept="image/*"
+              accept="Image/*"
               onChange={handleImageUpload}
               style={styles.fileInput}
             />
@@ -356,11 +354,11 @@ const styles = {
       borderRadius: '20px',
       cursor: 'pointer',
     },
-    imagePreview: {
+    ImagePreview: {
       position: 'relative',
       marginTop: '10px',
     },
-    image: {
+    Image: {
       width: '100%',
       borderRadius: '8px',
     },
