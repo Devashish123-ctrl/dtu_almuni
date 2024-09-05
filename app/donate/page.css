@@ -1,0 +1,194 @@
+/* Ensures the page takes full viewport height and width */
+body, html {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    overflow-x: hidden; /* Hides any horizontal scrollbar */
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+.back {
+    width: 100%; /* Use 100% to fill the body width, not 100vw */
+    height: 85vh;
+    background-size: cover; /* Adjusted for full background coverage */
+    background-position: bottom;
+    color: white;
+}
+.back h1 {
+    text-align: center;
+    font-size: 45px;
+    font-family: sans-serif;
+}
+
+.bt {
+    border: 0;
+    background-color: rgb(173, 5, 5);
+    color: white;
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 23px;
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 50px;
+    margin-left: 32vw;
+}
+
+.stat {
+    background-color: rgb(173, 5, 5);
+    height: 20vh;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%; /* Ensures it fills the body width */
+}
+.stat div {
+    text-align: center;
+}
+.stat div h1 {
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size: 50px;
+}
+.stat div p {
+    font-size: 25px;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+
+.giving {
+    background-color: rgb(231, 228, 228);
+    display: flex;
+    width: 100%; /* Use 100% instead of 100vw */
+    height: 88vh;
+}
+
+.box {
+    background-color: white;
+    width: 35%; /* Use percentage width to be responsive */
+    height: 600px;
+    margin: 30px auto 60px auto; /* Center elements horizontally */
+    padding: 15px;
+    border: 1px dotted rgb(90, 89, 89);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.box img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 400px; /* Ensure it doesn't exceed container width */
+    margin-bottom: 20px;
+}
+.box h2 {
+    font-weight: bold;
+    font-family: sans-serif;
+}
+.box p {
+    font-family: sans-serif;
+}
+
+.but {
+    display: flex;
+    justify-content: space-between;
+}
+.black {
+    font-family: sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: rgb(63, 63, 63);
+    color: white;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.red {
+    font-family: sans-serif;
+    font-size: 15px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 7px;
+    padding: 10px;
+}
+
+.written-1 {
+    font-family: sans-serif;
+    margin-top: 100px;
+    margin-left: 200px;
+    font-size: 18px;
+}
+.written-1 h1, blockquote {
+    font-weight: bold;
+}
+blockquote {
+    font-size: 20px;
+}
+
+.impact {
+    display: flex;
+    height: 70vh;
+    width: 80%;
+    margin: auto;
+}
+.data{
+    width: 50%;
+}
+
+.impact img {
+    height: 50%;
+    width: auto;
+    margin-left: 100px;
+    margin-top: 100px;
+
+}
+
+.written-2 {
+    width: 50%;
+    font-family: sans-serif;
+    font-weight: bold;
+}
+.written-2 h1 {
+    font-weight: bold;
+}
+.written-2 p {
+    font-size: 18px;
+}
+
+.priority {
+    padding-top: 50px;
+    background-color: rgb(231, 228, 228);
+}
+.bl {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    font-weight: bold;
+    padding-top: 50px;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+.blocks {
+    background-color: white;
+    width: 400px; /* Use percentage width to be responsive */
+    height: 450px;
+    padding: 20px;
+    border: 1px dotted rgb(90, 89, 89);
+    border-radius: 10px;
+    box-sizing: border-box;
+}
+.blocks img {
+    width: 100%; /* Make the image responsive */
+    height: auto; /* Maintain aspect ratio */
+    max-width: 340px; /* Ensure it does not exceed container */
+    margin-bottom: 10px;
+}
+.blocks h2 {
+    font-weight: bold;
+    font-size: 25px;
+    font-family: sans-serif;
+}
+.blocks p {
+    font-size: 15px;
+    font-family: sans-serif;
+}

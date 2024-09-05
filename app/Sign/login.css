@@ -1,0 +1,296 @@
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+.store{
+    height: 100%;
+    position: relative;
+    width: 100%;
+    max-width: 412px;
+    margin: auto;
+    background-color: black;
+}
+#bio{
+  height:100%;
+  width: auto;
+}
+.flex{
+width: 100%;
+display:flex;
+height:10%;
+}
+.background_adder{
+  height: 89%;
+  width: 100%;
+  max-width: 412px;
+
+}
+#student_image{
+  height: 100%;
+  width: 95%;
+  display: block;
+  margin: auto;
+  border-radius: 30px;
+  
+}
+#pan{
+  font-size: 20px;
+  font-family: cursive;
+  color:white;
+  padding-top: 30px;
+  padding-right: 50%;
+}
+#header{
+    position: absolute;
+    bottom: 59%;
+    width: 100px;
+    font-size: 28px;
+    left: 20px;
+    color: rgb(65, 32, 5);
+    font-family: cursive;
+    
+}
+
+@media only screen and (min-width: 600px) {
+    
+    body{
+        background-color: rgb(65, 32, 5);
+    }
+    .background_adder{
+        height: 90%;
+        width: 100%;
+    }
+    .flex{
+        height: 10%;
+    }
+    #header{
+        font-size:28px;
+        bottom: 57%;
+    }
+  }
+
+  .train-track {
+    display: flex;
+    width: 100%;
+    margin-top: 60px;
+    overflow: hidden; /* To hide any overflow during animation */
+    position: relative;
+  }
+  
+  
+  @keyframes moveTrain {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  .train {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: auto;
+    width: 300px; /* Specify a width to maintain consistency */
+    background-color: transparent; /* You can set a background color if needed */
+    transition: transform 0.3s ease;
+    animation: moveTrain 5s linear infinite; /* Smooth transitions for hover effects */
+    padding: 10px; /* Add some padding if needed */
+    margin: 0 10px; /* Adjust margin for spacing */
+  }
+  
+  .train:hover {
+    transform: scale(1.05); /* Subtle hover effect */
+  }
+  
+  .train-image {
+    height: 120px;
+    width: auto;
+    filter: grayscale(100%);
+  }
+  
+  .white {
+    color: rgb(98, 88, 88);
+    font-family: sans-serif;
+    text-align: center; /* Center align text */
+    margin-top: 10px; /* Space between elements */
+  }
+  .black{
+    color: whitesmoke;
+    font-family: sans-serif;
+  }
+
+
+  .train-container {
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    position: relative;
+    margin-top: 30px;
+  }
+  
+  .train-text {
+    display: inline-block;
+    white-space: nowrap;
+    padding-left: 100%;
+    animation: moveTrain 60s linear infinite;
+    
+
+  }
+  
+  .train-text span {
+    font-size: 14px;
+    color: whitesmoke;
+    padding: 2px;
+    margin-right: 40px;
+    
+    font-family: sans-serif;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Very thin, light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+    padding: 10px 20px;
+  box-shadow: 2px gray;
+  }
+
+
+
+    /* Basic styles for the container */
+.train-containers {
+  overflow: hidden;
+  white-space: nowrap;
+  width: 100%; /* Adjust this width as needed */
+  position: relative;
+}
+
+/* Styles for the moving texts */
+.train-texts {
+  display: flex;
+  margin-top: 40px;
+  gap: 20px; /* Adjust spacing between texts as needed */
+  animation: scrollLeft 30s linear infinite; /* 15s duration for a smooth scroll effect */
+}
+
+.train-texts span {
+  font-size: 14px;
+    border: 1px solid ;
+    font-family: sans-serif;
+    display: inline-block;
+    padding: 10px 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Very thin, light border */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  color: white;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Keyframe animation for scrolling text */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(-100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(100%); /* End at the left */
+  }
+}
+  
+  
+
+  .content {
+    
+    color: white;
+    padding: 20px;
+    font-family: sans-serif;
+  }
+
+
+  
+
+  @keyframes moveTrains {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0%);
+    }}
+
+
+
+.profile {
+  display: flex;
+  flex-direction: column;
+}
+
+.profile-image {
+  border-radius: 50%;
+  width: 80px;
+  height: auto;
+}
+
+.profile-name {
+  margin: 10px 0;
+  font-size: 1.2rem;
+}
+
+.nav-links {
+  margin-top: 20px;
+}
+
+.nav-link {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+  margin: 5px 0;
+  transition: background-color 0.3s;
+}
+
+.nav-link:hover {
+  background-color: #444;
+}
+
+.sidebar{
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+}
+a {
+  font-family: sans-serif;
+  cursor: pointer;
+}
+
+/* From Uiverse.io by ShrinilDhorda */ 
+.btn {
+  font-size: 1.2rem;
+  padding: 1rem 2.5rem;
+  border: none;
+  outline: none;
+  border-radius: 0.4rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  background-color: rgb(14, 14, 26);
+  color: rgb(234, 234, 234);
+  font-weight: 700;
+  transition: 0.6s;
+  box-shadow: 0px 0px 60px #1f4c65;
+  -webkit-box-reflect: below 10px linear-gradient(to bottom, rgba(0,0,0,0.0), rgba(0,0,0,0.4));
+}
+
+.btn:active {
+  scale: 0.92;
+}
+
+.btn:hover {
+  background: rgb(2,29,78);
+  background: linear-gradient(270deg, rgba(2, 29, 78, 0.681) 0%, rgba(31, 215, 232, 0.873) 60%);
+  color: rgb(4, 4, 38);
+}
