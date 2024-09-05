@@ -46,7 +46,7 @@ export default function Page() {
      
      if (data.message=='new_user'){
       
-      push('profile-update/')
+      push('/profile-update')
             
      }
       if (data.message=='old_users'){
